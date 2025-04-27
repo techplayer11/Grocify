@@ -67,3 +67,8 @@ document.querySelector('.login-form').addEventListener('submit', function(e) {
     updateUserDisplay();
 
 });
+
+
+// Back to top button
+let topBtn = document.createElement('div');
+topBtn.innerHTML = '↑';
