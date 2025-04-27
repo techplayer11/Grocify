@@ -211,3 +211,39 @@ function updateCartTotal() {
     totalDiv.textContent = `Total: RS.${total}/-`;
   }
 }
+
+// Initialize when DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Add badge to cart button if not exists
+  const cartBtn = document.querySelector('#cart-btn');
+  if (cartBtn && !cartBtn.querySelector('.badge')) {
+    const badge = document.createElement('span');
+    badge.className = 'badge';
+    badge.textContent = '0';
+    cartBtn.appendChild(badge);
+    
+    // Add necessary CSS for badge
+    const style = document.createElement('style');
+    style.textContent = `
+      .badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: red;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-family: Arial, sans-serif;
+      }
+      
+      #cart-btn {
+        position: relative;
+      }
+    `;
+    document.head.appendChild(style);
+  }
