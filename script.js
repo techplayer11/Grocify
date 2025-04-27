@@ -1,5 +1,3 @@
-// Version 1: Basic Cart Functionality Fix
-// Focuses on initial cart button functionality and event handling
 document.addEventListener('DOMContentLoaded', function() {
   let shoppingCart = document.querySelector('.shopping-cart');
   let searchForm = document.querySelector('.search-form');
@@ -7,40 +5,49 @@ document.addEventListener('DOMContentLoaded', function() {
   let navbar = document.querySelector('.navbar');
   let cartCount = document.querySelectorAll('.shopping-cart .box').length;
   
-  // Initialize cart count
+  // Initialize cart
   updateCartCount();
+  updateCartTotal();
   
-  // Button click handlers with preventDefault added
+  // Button click handlers with improved event handling
   document.querySelector('#cart-btn').onclick = (e) => {
-    e.preventDefault(); // Add this to prevent page scrolling
+    e.preventDefault();
+    e.stopPropagation(); // Stop event propagation
     shoppingCart.classList.toggle('active');
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
+    return false; // Additional prevention
   };
   
   document.querySelector('#search-btn').onclick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     searchForm.classList.toggle('active');
     loginForm.classList.remove('active');
     shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
+    return false;
   };
   
   document.querySelector('#login-btn').onclick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     loginForm.classList.toggle('active');
     searchForm.classList.remove('active');
     shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
+    return false;
   };
   
   document.querySelector('#menu-btn').onclick = (e) => {
     e.preventDefault();
+    e.stopPropagation();
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
     shoppingCart.classList.remove('active');
+    return false;
   };
   
   // Close dropdown menus when clicking outside
@@ -117,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Function to update cart count 
+  // Function to update cart count
   function updateCartCount() {
     const badge = document.querySelector('#cart-btn .badge');
     if (badge) {
@@ -205,6 +212,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalDiv = document.querySelector('.shopping-cart .total');
     if (totalDiv) {
       totalDiv.textContent = `Total: RS.${total}/-`;
+    } else {
+      // Create total div if it doesn't exist
+      const newTotalDiv = document.createElement('div');
+      newTotalDiv.className = 'total';
+      newTotalDiv.textContent = `Total: RS.${total}/-`;
+      
+      const cartContainer = document.querySelector('.shopping-cart');
+      const checkoutBtn = document.querySelector('.shopping-cart .btn');
+      
+      if (checkoutBtn) {
+        cartContainer.insertBefore(newTotalDiv, checkoutBtn);
+      } else {
+        cartContainer.appendChild(newTotalDiv);
+      }
     }
   }
   
@@ -220,11 +241,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Fix "Add to Cart" buttons - First attempt
+  // Enhanced "Add to Cart" button handling
   document.querySelectorAll('.btn').forEach(btn => {
     if (btn.textContent.includes('Add to Cart')) {
       btn.addEventListener('click', function(e) {
-        e.preventDefault(); // Prevent default action
+        e.preventDefault();
+        e.stopPropagation(); // Stop event propagation
         
         const productBox = this.closest('.box');
         if (productBox) {
@@ -233,8 +255,35 @@ document.addEventListener('DOMContentLoaded', function() {
           const imgSrc = productBox.querySelector('img').src;
           addItemToCart(itemName, price, imgSrc);
         }
+        return false; // Additional prevention
       });
     }
+  });
+  
+  // Prevent default behavior for all shopping action links
+  document.querySelectorAll('a.btn').forEach(link => {
+    link.addEventListener('click', function(e) {
+      if (this.textContent.includes('Add to Cart') || 
+          this.textContent.includes('Shop now') || 
+          this.textContent.includes('Checkout')) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+      }
+    });
+  });
+  
+  // Set up event listeners for existing cart items
+  document.querySelectorAll('.shopping-cart .fa-trash').forEach(trashIcon => {
+    trashIcon.addEventListener('click', function() {
+      if (confirm('Remove this item from the cart?')) {
+        this.closest('.box').remove();
+        cartCount = Math.max(0, cartCount - 1);
+        updateCartCount();
+        updateCartTotal();
+        showToast('Item removed from cart!');
+      }
+    });
   });
   
   // Initialize user display
