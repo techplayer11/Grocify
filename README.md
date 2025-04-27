@@ -86,3 +86,30 @@ grocify/
 - **Search Functionality**: Filter products
 - **Responsive Menu**: Mobile-friendly navigation
 - **Back to Top Button**: Easy page navigation
+
+## Future Enhancements
+
+- Payment gateway integration
+- User registration system
+- Product filtering and sorting
+- Wishlist functionality
+- Order tracking system
+- Admin dashboard for inventory management
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Icons provided by [FontAwesome](https://fontawesome.com/)
+- Product images are placeholders and should be replaced with actual product images
+- Inspired by modern e-commerce platforms
