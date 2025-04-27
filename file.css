@@ -231,3 +231,234 @@ section{
     color: var(--light-color);
     transform:translateY(-50);
 }
+
+.header .shopping-cart .box .fa-trash:hover{
+    color: var(--green);
+}
+
+.header .shopping-cart .box .content h3{
+    color:var(--black);
+    font-size:1.7rem;
+    padding-bottom:1rem;
+}
+ span{
+    color:var(--light-color);
+    font-size:1.7rem;
+}
+
+.Quan{
+    padding-left:1rem;
+}
+
+.total{
+    font-size:2.2rem;
+    padding: 1rem 0;
+    text-align:center;
+    color:var(--black);
+}
+.btn{
+    border:0.2rem solid var(--black);
+    margin-top:1rem;
+    display:inline-block;
+    padding:0.8rem 3rem;
+    font-size:1.7rem;
+    border-radius:0.5rem;
+    cursor:pointer;
+    background:none;
+}
+.btn{
+    display:block;
+    text-align:center;
+    margin:1rem 0;
+}
+.btn:hover{
+    background:var(--green);
+    color:white;
+}
+
+.header .shopping-cart.active{
+    right:2rem;
+    transition:0.4s linear;
+}
+
+.login-form{
+    width:30rem;
+    border:0px solid;
+    position:absolute;
+    top:110%;
+    right:-110%;
+    box-shadow: var(--box-shadow);
+    padding:2rem;
+    border-radius:0.5rem;
+    background:#fff;
+    text-align:center;
+}
+
+.login-form h3{
+    font-size:2.5rem;
+    text-transform:uppercase;
+    color:var(--black);
+}
+
+.box{
+    width:100%;
+    border:0px solid;
+    margin:0.7rem 0;
+    background: #eee;
+    border-radius:0.5rem;
+    padding:1rem;
+    font-size:1.6rem;
+    color:var(--black);
+    text-transform:none;
+}
+
+.login-form p{
+    font-size:1.4rem;
+    padding:0.5rem;
+    color:var(--light-color);
+}
+
+.login-form p a{
+    color:var(--green);
+    text-decoration:underline;
+}
+
+.login-form.active{
+    right:2rem;
+    transition:0.4s linear;
+}
+
+.btn {
+    max-width: 200px;
+    display: block;
+    margin: auto;
+    width: fit-content;
+}
+
+
+.Features .box-container{
+     border:0px solid;
+     display:grid;
+     grid-template-columns:repeat(auto-fit,minmax(30rem,1fr));
+     gap:1.5rem;
+}
+
+
+.box{
+    border:0px solid red;
+    padding: 3rem 2rem;
+    background:#fff;
+    outline:var(--outline);
+    outline-offset:-1rem;
+    text-align:center;
+    box-shadow:var(--box-shadow);
+}
+
+.box:hover{
+    box-shadow: 1px 1px 10px 4px var(--green);
+}
+
+.box img{
+    margin:1rem 0;
+    height:20rem;
+}
+
+.box h3{
+    font-size:2.5rem;
+    line-height:1.8;
+    color:var(--black);
+}
+
+.box p{
+    font-size:1.5rem;
+    line-height:1.8;
+    color:var(--black);
+    
+}
+
+
+/* General Section Styling */
+.products {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+.heading {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.heading span {
+    color: #f39c12; /* Highlight color */
+}
+
+/* Product Slider Styling */
+.product-slider {
+    display: flex;
+    flex-direction: column; /* Stacks wrappers vertically */
+    gap: 20px; /* Space between rows */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between boxes */
+}
+
+/* Box Styling */
+.box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px; /* Fixed width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.box:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.box h1 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.box .price {
+    font-size: 1rem;
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+.stars i {
+    font-size: 1.7rem;
+    color: orange;
+    margin-right: 5px;
+}
+
+.box .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f39c12;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.box .btn:hover {
+    background-color: #d35400; /* Darker shade */
+}
