@@ -148,6 +148,12 @@ document.addEventListener('DOMContentLoaded', function() {
       toast.remove();
     }, 3000);
   }
+
+  // item added to cart
+document.querySelector("#cart-btn").addEventListener("click", () => {
+  showToast("Item added to cart!");
+});
+
   
   // Function to add item to cart
   function addItemToCart(itemName, price, imgSrc) {
@@ -295,10 +301,4 @@ document.addEventListener('DOMContentLoaded', function() {
   setTimeout(() => {
     toast.remove();
   }, 3000);
-}
-
-
-// item added to cart
-document.querySelector("#cart-btn").addEventListener("click", () => {
-  showToast("Item added to cart!");
 });
