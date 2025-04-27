@@ -53,7 +53,7 @@ document.addEventListener('click', function(e) {
     if (!e.target.closest('.navbar') && !e.target.closest('#menu-btn')) {
       navbar.classList.remove('active');
   }
-  });  
+  });
 
   
 // Login form submission
@@ -72,6 +72,7 @@ document.querySelector('.login-form').addEventListener('submit', function(e) {
 // Back to top button
 let topBtn = document.createElement('div');
 topBtn.innerHTML = '↑';
+
 topBtn.style.cssText = `
   position: fixed;
   bottom: 20px;
@@ -94,3 +95,67 @@ topBtn.onclick = () => {
 window.addEventListener('scroll', () => {
     topBtn.style.display = window.scrollY > 500 ? 'block' : 'none';
 });
+
+
+// Dark mode toggle
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+darkModeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Change button text/icon dynamically
+  if (document.body.classList.contains("dark-mode")) {
+    darkModeToggle.textContent = "☀️ Light Mode";
+    localStorage.setItem("theme", "dark");
+  } else {
+    darkModeToggle.textContent = "🌙 Dark Mode";
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// Load theme from localStorage on page load
+window.addEventListener("DOMContentLoaded", () => {
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.body.classList.add("dark-mode");
+    darkModeToggle.textContent = "☀️ Light Mode";
+  }
+});
+
+
+// Cart count update
+let cartCount = 0;
+function updateCartCount() {
+  const badge = document.querySelector('#cart-btn .badge');
+  badge.textContent = cartCount--;
+}
+
+
+//Toast notification
+function showToast(message) {
+  let toast = document.createElement("div");
+  toast.textContent = message;
+  toast.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+  `;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
+
+
+// item added to cart
+document.querySelector("#cart-btn").addEventListener("click", () => {
+  showToast("Item added to cart!");
+});
+
