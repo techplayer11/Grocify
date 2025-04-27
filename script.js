@@ -56,3 +56,19 @@ document.addEventListener('click', function(e) {
   });  
 
   
+// Login form submission
+document.querySelector('.login-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent page reload
+    // alert('Form submitted successfully!');
+    const email = document.querySelector('.login-form input[type="email"]').value;
+    localStorage.setItem('loggedInUser', email);
+    showToast("Logged in successfully!");
+    loginForm.classList.remove('active');
+    updateUserDisplay();
+
+});
+
+
+// Back to top button
+let topBtn = document.createElement('div');
+topBtn.innerHTML = '↑';
