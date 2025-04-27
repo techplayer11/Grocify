@@ -195,3 +195,19 @@ function addItemToCart(itemName, price, imgSrc) {
   showToast(`${itemName} added to cart!`);
 }
 
+function updateCartTotal() {
+  // Calculate total price from all items in cart
+  let total = 0;
+  document.querySelectorAll('.shopping-cart .box .Price').forEach(priceElement => {
+    const priceText = priceElement.textContent;
+    const price = parseFloat(priceText.replace('RS.', '').replace('Rs.', '').replace('/-', ''));
+    if (!isNaN(price)) {
+      total += price;
+    }
+  });
+  
+  const totalDiv = document.querySelector('.shopping-cart .total');
+  if (totalDiv) {
+    totalDiv.textContent = `Total: RS.${total}/-`;
+  }
+}
