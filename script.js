@@ -291,7 +291,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-  
-  // Initialize user display
-  updateUserDisplay();
+ 
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
+
+
+// item added to cart
+document.querySelector("#cart-btn").addEventListener("click", () => {
+  showToast("Item added to cart!");
 });
