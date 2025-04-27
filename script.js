@@ -125,9 +125,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Cart count update
 let cartCount = 0;
+
 function updateCartCount() {
   const badge = document.querySelector('#cart-btn .badge');
-  badge.textContent = cartCount--;
+  if (badge) {
+    badge.textContent = cartCount;
+  }
 }
 
 
@@ -145,6 +148,7 @@ function showToast(message) {
     padding: 10px;
     border-radius: 5px;
     opacity: 0.9;
+    z-index: 1000;
   `;
   document.body.appendChild(toast);
   
@@ -152,3 +156,29 @@ function showToast(message) {
     toast.remove();
   }, 3000);
 }
+
+function addItemToCart(itemName, price, imgSrc) {
+  // Create a new cart item
+  const box = document.createElement('div');
+  box.className = 'box';
+  
+  box.innerHTML = `
+    <i class="fa fa-trash"></i>
+    <img src="${imgSrc}" height="100" width="100">
+    <div class="content">
+      <h3>${itemName}</h3>
+      <span class="Price">${price}</span>
+      <span class="Quan">1</span>
+    </div>
+  `;
+  
+  // Add event listener to the trash icon
+  box.querySelector('.fa-trash').addEventListener('click', function() {
+    if (confirm('Remove this item from the cart?')) {
+      box.remove();
+      cartCount--;
+      updateCartCount();
+      updateCartTotal();
+      showToast('Item removed from cart!');
+    }
+  });
