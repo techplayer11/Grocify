@@ -158,3 +158,16 @@ function showToast(message) {
 document.querySelector("#cart-btn").addEventListener("click", () => {
   showToast("Item added to cart!");
 });
+
+
+//Item removal from cart
+document.querySelectorAll('.shopping-cart .fa-trash').forEach(btn => {
+  btn.addEventListener('click', () => {
+      if (confirm('Remove this item from the cart?')) {
+          btn.parentElement.remove();
+          cartCount = Math.max(0, cartCount - 1);
+          updateCartCount();
+          showToast('Item removed from cart!');
+      }
+  });
+});
