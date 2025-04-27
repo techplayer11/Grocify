@@ -52,3 +52,71 @@ section{
     padding:0.5rem 3rem;
     clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
 }
+
+
+section{
+    padding:4em 10%;
+}
+.header{
+    border:0px solid;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+}
+
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+.header .logo i{
+    color: var(--yellow);
+}
+
+.header .navbar a{
+    font-size:1.7rem;
+    margin:0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover{
+    color: var(--green);
+}
+
+.header .icons div{
+    border: 0px solid;
+    height:4.5rem;
+    width:4.5rem;
+    line-height:4.5rem;
+    border-radius:0.5rem;
+    background:#eee;
+    color: var(--black);
+    font-size:2rem;
+    margin-right:0.4rem;
+    text-align:center;
+    cursor:pointer;
+}
+
+.header .icons div:hover{
+    background: var(--green);
+    color:white;
+}
+
+#menu-btn{
+    display:none;
+}
+
+.header .navbar.active{
+    right:2rem;
+    transition:0.4s linear;
+}
+
