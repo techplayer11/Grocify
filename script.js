@@ -247,3 +247,79 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
   }
+
+  // Add event listeners to all "Add to Cart" buttons
+  document.querySelectorAll('.btn').forEach(btn => {
+    if (btn.textContent.includes('Add to Cart')) {
+      btn.addEventListener('click', function(e) {
+        // Prevent default action (scrolling to top)
+        e.preventDefault();
+        e.stopPropagation(); // Added to stop event bubbling
+        
+        const productBox = this.closest('.box');
+        if (productBox) {
+          const itemName = productBox.querySelector('h1').textContent;
+          const price = productBox.querySelector('.price').textContent;
+          const imgSrc = productBox.querySelector('img').src;
+          addItemToCart(itemName, price, imgSrc);
+        }
+        return false; // Added to ensure the link action is canceled
+      });
+    }
+  });
+
+  // Prevent default behavior for all shopping action links
+  document.querySelectorAll('a.btn').forEach(link => {
+    if (link.textContent.includes('Add to Cart') || 
+        link.textContent.includes('Shop now') || 
+        link.textContent.includes('Checkout')) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation(); // Added to stop event bubbling
+        return false; // Added to ensure the link action is canceled
+      });
+    }
+  });
+
+  // Event listeners for existing cart item removal
+  document.querySelectorAll('.shopping-cart .fa-trash').forEach(btn => {
+    btn.addEventListener('click', function() {
+      if (confirm('Remove this item from the cart?')) {
+        this.closest('.box').remove();
+        cartCount = Math.max(0, cartCount - 1);
+        updateCartCount();
+        updateCartTotal();
+        showToast('Item removed from cart!');
+      }
+    });
+  });
+
+  // Initialize cart count based on existing items
+  cartCount = document.querySelectorAll('.shopping-cart .box').length;
+  updateCartCount();
+  updateCartTotal();
+  
+  // Initialize user display
+  updateUserDisplay();
+});
+
+// Additional event listener to make sure "Add to Cart" works even after page is fully loaded
+window.addEventListener('load', function() {
+  document.querySelectorAll('.btn').forEach(btn => {
+    if (btn.textContent.includes('Add to Cart')) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const productBox = this.closest('.box');
+        if (productBox) {
+          const itemName = productBox.querySelector('h1').textContent;
+          const price = productBox.querySelector('.price').textContent;
+          const imgSrc = productBox.querySelector('img').src;
+          addItemToCart(itemName, price, imgSrc);
+        }
+        return false;
+      });
+    }
+  });
+});
