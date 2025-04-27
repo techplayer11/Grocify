@@ -121,3 +121,34 @@ window.addEventListener("DOMContentLoaded", () => {
     darkModeToggle.textContent = "☀️ Light Mode";
   }
 });
+
+
+// Cart count update
+let cartCount = 0;
+function updateCartCount() {
+  const badge = document.querySelector('#cart-btn .badge');
+  badge.textContent = cartCount--;
+}
+
+
+//Toast notification
+function showToast(message) {
+  let toast = document.createElement("div");
+  toast.textContent = message;
+  toast.style.cssText = `
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0.9;
+  `;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.remove();
+  }, 3000);
+}
