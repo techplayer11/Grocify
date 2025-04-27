@@ -56,6 +56,7 @@ document.addEventListener('click', function(e) {
   });
 
 
+  
 // Login form submission
 document.querySelector('.login-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent page reload
