@@ -72,3 +72,26 @@ document.querySelector('.login-form').addEventListener('submit', function(e) {
 // Back to top button
 let topBtn = document.createElement('div');
 topBtn.innerHTML = '↑';
+
+topBtn.style.cssText = `
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 20px;
+  background: var(--green);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+`;
+document.body.appendChild(topBtn);
+
+topBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+window.addEventListener('scroll', () => {
+    topBtn.style.display = window.scrollY > 500 ? 'block' : 'none';
+});
