@@ -53,17 +53,6 @@ document.addEventListener('click', function(e) {
     if (!e.target.closest('.navbar') && !e.target.closest('#menu-btn')) {
       navbar.classList.remove('active');
   }
-  });
+  });  
 
   
-// Login form submission
-document.querySelector('.login-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent page reload
-    // alert('Form submitted successfully!');
-    const email = document.querySelector('.login-form input[type="email"]').value;
-    localStorage.setItem('loggedInUser', email);
-    showToast("Logged in successfully!");
-    loginForm.classList.remove('active');
-    updateUserDisplay();
-
-});
