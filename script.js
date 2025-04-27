@@ -182,3 +182,16 @@ function addItemToCart(itemName, price, imgSrc) {
       showToast('Item removed from cart!');
     }
   });
+  
+  // Add the item to the cart
+  const cartContainer = document.querySelector('.shopping-cart');
+  // Insert before the total and checkout button
+  const totalDiv = document.querySelector('.shopping-cart .total');
+  cartContainer.insertBefore(box, totalDiv);
+  
+  cartCount++;
+  updateCartCount();
+  updateCartTotal();
+  showToast(`${itemName} added to cart!`);
+}
+
