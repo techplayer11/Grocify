@@ -95,3 +95,29 @@ topBtn.onclick = () => {
 window.addEventListener('scroll', () => {
     topBtn.style.display = window.scrollY > 500 ? 'block' : 'none';
 });
+
+
+// Dark mode toggle
+const darkModeToggle = document.getElementById("darkModeToggle");
+
+darkModeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  // Change button text/icon dynamically
+  if (document.body.classList.contains("dark-mode")) {
+    darkModeToggle.textContent = "☀️ Light Mode";
+    localStorage.setItem("theme", "dark");
+  } else {
+    darkModeToggle.textContent = "🌙 Dark Mode";
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// Load theme from localStorage on page load
+window.addEventListener("DOMContentLoaded", () => {
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.body.classList.add("dark-mode");
+    darkModeToggle.textContent = "☀️ Light Mode";
+  }
+});
