@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Button click handlers
   document.querySelector('#cart-btn').onclick = (e) => {
     e.preventDefault();
-    shoppingCart.classList.toggle('active');
-    searchForm.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+      shoppingCart.classList.toggle('active');
+      searchForm.classList.remove('active');
+      loginForm.classList.remove('active');
+      navbar.classList.remove('active');
   };
   
   document.querySelector('#search-btn').onclick = (e) => {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     shoppingCart.classList.remove('active');
   };
   
-  // Close dropdown menus when clicking outside
+// Close dropdown menus when clicking outside
   document.addEventListener('click', function(e) {
     if (!e.target.closest('.search-form') && !e.target.closest('#search-btn')) {
       searchForm.classList.remove('active');
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Handle login form submission
+// Login form submission
   document.querySelector('.login-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent page reload
     const email = document.querySelector('.login-form input[type="email"]').value;
