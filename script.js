@@ -5,49 +5,41 @@ document.addEventListener('DOMContentLoaded', function() {
   let navbar = document.querySelector('.navbar');
   let cartCount = document.querySelectorAll('.shopping-cart .box').length;
   
-  // Initialize cart
+  // Initialize the cart count badge
   updateCartCount();
   updateCartTotal();
   
-  // Button click handlers with improved event handling
+  // Button click handlers
   document.querySelector('#cart-btn').onclick = (e) => {
     e.preventDefault();
-    e.stopPropagation(); // Stop event propagation
     shoppingCart.classList.toggle('active');
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
     navbar.classList.remove('active');
-    return false; // Additional prevention
   };
   
   document.querySelector('#search-btn').onclick = (e) => {
     e.preventDefault();
-    e.stopPropagation();
     searchForm.classList.toggle('active');
     loginForm.classList.remove('active');
     shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
-    return false;
   };
   
   document.querySelector('#login-btn').onclick = (e) => {
     e.preventDefault();
-    e.stopPropagation();
     loginForm.classList.toggle('active');
     searchForm.classList.remove('active');
     shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
-    return false;
   };
   
   document.querySelector('#menu-btn').onclick = (e) => {
     e.preventDefault();
-    e.stopPropagation();
     navbar.classList.toggle('active');
     searchForm.classList.remove('active');
     loginForm.classList.remove('active');
     shoppingCart.classList.remove('active');
-    return false;
   };
   
   // Close dropdown menus when clicking outside
@@ -68,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Handle login form submission
   document.querySelector('.login-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent page reload
     const email = document.querySelector('.login-form input[type="email"]').value;
     localStorage.setItem('loggedInUser', email);
     showToast("Logged in successfully!");
@@ -76,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateUserDisplay();
   });
   
-  // Back to top button
+  // Add "back to top" button
   let topBtn = document.createElement('div');
   topBtn.innerHTML = '↑';
   topBtn.style.cssText = `
@@ -108,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     darkModeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
       
+      // Change button text/icon dynamically
       if (document.body.classList.contains("dark-mode")) {
         darkModeToggle.textContent = "☀️ Light Mode";
         localStorage.setItem("theme", "dark");
@@ -117,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
+    // Load theme from localStorage on page load
     const theme = localStorage.getItem("theme");
     if (theme === "dark") {
       document.body.classList.add("dark-mode");
@@ -124,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Function to update cart count
+  // Function to update cart count badge
   function updateCartCount() {
     const badge = document.querySelector('#cart-btn .badge');
     if (badge) {
@@ -182,13 +176,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
     
-    // Add the item to the cart
+    // Find the total element to insert before
     const cartContainer = document.querySelector('.shopping-cart');
     const totalDiv = document.querySelector('.shopping-cart .total');
     
     if (totalDiv) {
       cartContainer.insertBefore(box, totalDiv);
     } else {
+      // If total div doesn't exist, just append to the cart
       cartContainer.appendChild(box);
     }
     
@@ -225,11 +220,18 @@ document.addEventListener('DOMContentLoaded', function() {
         cartContainer.insertBefore(newTotalDiv, checkoutBtn);
       } else {
         cartContainer.appendChild(newTotalDiv);
+        
+        // Add checkout button if it doesn't exist
+        const checkoutBtn = document.createElement('a');
+        checkoutBtn.href = '#';
+        checkoutBtn.className = 'btn';
+        checkoutBtn.textContent = 'Checkout';
+        cartContainer.appendChild(checkoutBtn);
       }
     }
   }
   
-  // Update user display
+  // Update user display function
   function updateUserDisplay() {
     const email = localStorage.getItem('loggedInUser');
     if (email) {
@@ -241,12 +243,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Enhanced "Add to Cart" button handling
+  // Fix for the Add to Cart buttons
+  // This needs to be outside the DOMContentLoaded event to make sure it runs after all elements are loaded
+  
+  // Add event listeners to all "Add to Cart" buttons
   document.querySelectorAll('.btn').forEach(btn => {
     if (btn.textContent.includes('Add to Cart')) {
       btn.addEventListener('click', function(e) {
+        // Prevent default action (scrolling to top)
         e.preventDefault();
-        e.stopPropagation(); // Stop event propagation
+        e.stopPropagation();
         
         const productBox = this.closest('.box');
         if (productBox) {
@@ -255,7 +261,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const imgSrc = productBox.querySelector('img').src;
           addItemToCart(itemName, price, imgSrc);
         }
-        return false; // Additional prevention
+        return false;
       });
     }
   });
@@ -273,7 +279,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Set up event listeners for existing cart items
+  // Set up event listeners for trash icons in existing cart items
   document.querySelectorAll('.shopping-cart .fa-trash').forEach(trashIcon => {
     trashIcon.addEventListener('click', function() {
       if (confirm('Remove this item from the cart?')) {
