@@ -3,7 +3,7 @@ let shoppingCart = document.querySelector('.shopping-cart');
 let searchForm = document.querySelector('.search-form');
 let loginForm = document.querySelector('.login-form');
 let navbar = document.querySelector('.navbar');
-
+let cartCount = 0;
 
 // event listeners for buttons
 document.querySelector('#cart-btn').onclick = () => {
@@ -124,7 +124,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 
 // Cart count update
-let cartCount = 0;
+
 
 function updateCartCount() {
   const badge = document.querySelector('#cart-btn .badge');
