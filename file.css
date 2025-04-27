@@ -120,3 +120,114 @@ section{
     transition:0.4s linear;
 }
 
+
+
+.Home{
+    border:0px solid;
+    display:flex;
+    justify-content:center;
+    background: url(https://deorwineblog.b-cdn.net/uploads/2022/06/a22-1.jpg) no-repeat;
+    background-position:center;
+    background-size:cover;
+    padding-top:25rem;
+    padding-bottom:10rem;
+}
+
+.content{
+    border:0px solid;
+    text-align:center;
+    width:60rem;
+}
+
+.content h3{
+    color:var(--black);
+    font-size:3rem;
+}
+
+.content h3 span{
+    color:var(--green);
+    font-size:3rem;
+}
+
+
+.Home .content p{
+    color:var(--light-color);
+    font-size:1.7rem;
+    padding:1rem 0;
+    line-height:1.8;
+}
+
+.header .search-form{
+    border: 0px solid;
+    position: absolute;
+    top: 110%;
+    right:-110%;
+    width:50rem;
+    height:5rem;
+    background:#fff;
+    border-radius:0.5rem;
+    overflow:hidden;
+    display:flex; //mobile view
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+.header .search-form.active{
+    right:2rem;
+    transition:0.4s linear;
+}
+
+.header .search-form input{
+    height:100%;
+    width:100%;
+    background:none;
+    text-transform:none;
+    font-size:1.6rem;
+    color: var(--black);
+    padding:0 1.5rem;
+}
+
+.header .search-form label{
+    font-size:2.2 rem;
+    padding-right:2.5 rem;
+    color:var(--black);
+    cursor:pointer;
+}
+
+.header .search-form label:hover{
+    color:var(--green);
+}
+
+.header .shopping-cart{
+    border: 0px solid;
+    position:absolute;
+    top:100%;
+    right:-110%;
+    padding:1rem;
+    border-radius:0.5rem;
+    box-shadow: var(--box-shadow);
+    width:35rem;
+    background: #fff;
+}
+
+.header .shopping-cart .box{
+    border: 0px solid blue;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    position:relative;
+    margin: 1rem 0;
+}
+
+.header .shopping-cart .box img{
+    height:10rem;
+}
+
+.header .shopping-cart .box .fa-trash{
+    font-size:2rem;
+    position:absolute;
+    top:50%;
+    right:2rem;
+    cursor:pointer;
+    color: var(--light-color);
+    transform:translateY(-50);
+}
