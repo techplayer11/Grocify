@@ -171,3 +171,28 @@ document.querySelectorAll('.shopping-cart .fa-trash').forEach(btn => {
       }
   });
 });
+
+function showToast(message) {
+  let toast = document.createElement("div");
+  toast.textContent = message;
+  toast.classList.add("toast-message");
+  document.body.appendChild(toast);
+  setTimeout(() => {
+      toast.remove();
+  }, 3000);
+}
+
+
+// add item to cart
+function addItemToCart(itemName) {
+  cartCount++;
+  updateCartCount();
+  showToast(`${itemName} added to cart!`);
+}
+
+document.querySelectorAll('.products .btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+      const item = btn.parentElement.querySelector('h1').textContent;
+      addItemToCart(item);
+  });
+});
