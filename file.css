@@ -57,6 +57,8 @@ section{
 section{
     padding:4em 10%;
 }
+
+//Header 
 .header{
     border:0px solid;
     position:fixed;
@@ -229,7 +231,7 @@ section{
     right:2rem;
     cursor:pointer;
     color: var(--light-color);
-    transform:translateY(-50);
+    transform:translateY(-50%);
 }
 
 .header .shopping-cart .box .fa-trash:hover{
@@ -281,6 +283,8 @@ section{
     transition:0.4s linear;
 }
 
+
+//Login Form 
 .login-form{
     width:30rem;
     border:0px solid;
@@ -377,11 +381,11 @@ section{
 }
 
 
-/* General Section Styling */
+
 .products {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f9f9f9; /* Light gray background */
+    background-color: #f9f9f9; 
 }
 
 .heading {
@@ -391,7 +395,7 @@ section{
 }
 
 .heading span {
-    color: #f39c12; /* Highlight color */
+    color: #f39c12;
 }
 
 /* Product Slider Styling */
