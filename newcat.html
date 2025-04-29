@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Categories - Grocify</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #fff;
+      padding: 10px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .dark-mode-toggle {
+      margin-right: 15px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6c2bd9;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .icons i {
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Categories Section */
+    h1 {
+      text-align: center;
+      margin: 30px 0 10px;
+      color: #2c3e50;
+    }
+
+    .categories-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 30px;
+    }
+
+    .category-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 260px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .category-card:hover {
+      transform: scale(1.05);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .category-card h2 {
+      margin: 15px 0 5px;
+      color: #333;
+    }
+
+    .category-card p {
+      color: gray;
+      font-size: 14px;
+    }
+
+    .category-card button {
+      background-color: #f39c12;
+      border: none;
+      padding: 10px 20px;
+      color: white;
+      border-radius: 8px;
+      margin: 15px 0;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .category-card button:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-left">
+      <span class="dark-mode-toggle">🌙 Dark Mode</span>
+      <span class="logo">🛒 Grocify</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="file.html">Home</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Blogs</a></li>
+    </ul>
+    <div class="icons">
+        <div class="fa fa-bars" id="menu-btn"></div>
+        <div class="fa fa-search" id="search-btn"></div>
+        <div class="fa fa-shopping-cart" id="cart-btn"></div>
+        <div class="fa fa-user" id="login-btn"></div>
+    </div>
+  </div>
+
+  <!-- Categories Section -->
+  <h1>Our Categories</h1>
+  <div class="categories-container">
+
+    <div class="category-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlDE9fiZxCUppX0lLhzc3hFUKQcjV7Bg9mTw&s" alt="Fruits">
+      <h2>Fruits</h2>
+      <p>Upto 45% off</p>
+      <button onclick="goToPage('fruits.html')">Shop now</button>
+    </div>
+
+    <div class="category-card">
+      <img src="https://www.siilc.edu.in/courses/wp-content/uploads/2024/03/c-29.jpg" alt="Dairy Products">
+      <h2>Dairy products</h2>
+      <p>Upto 30% off</p>
+      <button onclick="goToPage('dairy.html')">Shop now</button>
+    </div>
+
+    <div class="category-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJuNq8RtG1uqS8i3MZnRDPTWEMMB8EavLKCQ&s" alt="Pulses">
+      <h2>Pulses</h2>
+      <p>Upto 40% off</p>
+      <button onclick="goToPage('pulses.html')">Shop now</button>
+    </div>
+
+  </div>
+
+  <script>
+    function goToPage(page) {
+      window.location.href = page;
+    }
+  </script>
+
+</body>
+</html>
