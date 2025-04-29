@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Online Payment | Grocify</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="file.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <i class="fa fa-shopping-basket"></i> Grocify
+    </a>
+    <nav class="navbar">
+      <a href="index.html#Home">Home</a>
+      <a href="index.html#Features">Features</a>
+      <a href="index.html#Products">Products</a>
+      <a href="index.html#Categories">Categories</a>
+      <a href="index.html#Reviews">Reviews</a>
+      <a href="index.html#Blogs">Blogs</a>
+    </nav>
+    <div class="icons">
+      <div id="menu-btn" class="fa fa-bars"></div>
+      <div id="search-btn" class="fa fa-search"></div>
+      <div id="cart-btn" class="fa fa-shopping-cart"><span class="badge">0</span></div>
+      <div id="login-btn" class="fa fa-user"></div>
+    </div>
+
+    <form class="search-form">
+      <input type="search" id="search-box" placeholder="Search here..." />
+      <label for="search-box" class="fa fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+      <!-- Cart items will be injected by script.js -->
+      <div class="total">Total: RS.0/-</div>
+      <a href="#" id="checkout-btn" class="btn">Checkout</a>
+    </div>
+
+    <form action="#" class="login-form">
+      <h3>Login now</h3>
+      <input type="email" placeholder="Your email" class="box" />
+      <input type="password" placeholder="Your password" class="box" />
+      <p>Forgot password? <a href="#">Click here</a></p>
+      <p>Don't have an account? <a href="#">Create now</a></p>
+      <input type="submit" value="Login now" class="btn" />
+    </form>
+  </header>
+
+  <!-- Payment Section -->
+  <section class="Features" id="Payment">
+    <h1 class="heading">Secure <span>Online Payment</span></h1>
+    <div class="box-container">
+      <!-- Credit & Debit Cards -->
+      <div class="box">
+        <img src="C:\Users\Sakshi\OneDrive\Pictures\Featured-Image.jpg" alt="Credit Card"/>
+        <h3>Credit & Debit Cards</h3>
+        <p>Visa, MasterCard, Amex—all protected by SSL encryption.</p>
+      </div>
+      <!-- UPI Payments -->
+      <div class="box">
+        <img src="C:\Users\Sakshi\OneDrive\Pictures\upi-twitter.webp" alt="UPI Payment"/>
+        <h3>UPI Payments</h3>
+        <p>Google Pay, PhonePe, Paytm—instant confirmation.</p>
+      </div>
+      <!-- Net Banking -->
+      <div class="box">
+        <img src="https://img.icons8.com/fluency/96/000000/bank-building.png" alt="Net Banking"/>
+        <h3>Net Banking</h3>
+        <p>All major banks supported for secure transfers.</p>
+      </div>
+      <!-- Cash on Delivery -->
+      <div class="box">
+        <img src="https://img.icons8.com/color/96/000000/cash-in-hand.png" alt="Cash on Delivery"/>
+        <h3>Cash on Delivery</h3>
+        <p>Pay in cash when your order arrives at your doorstep.</p>
+      </div>
+    </div>
+    <a href="#" class="btn">Proceed to Payment</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-box">
+        <h3>About Us</h3>
+        <p>We provide fresh and organic products right at your doorstep. Your health is our priority!</p>
+      </div>
+      <div class="footer-box">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html#Home">Home</a></li>
+          <li><a href="index.html#Products">Products</a></li>
+          <li><a href="index.html#Reviews">Reviews</a></li>
+          <li><a href="index.html#Blogs">Blogs</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h3>Contact Us</h3>
+        <p><i class="fa fa-map-marker"></i> Rajpura, Punjab, India</p>
+        <p><i class="fa fa-envelope"></i> info@freshproducts.com</p>
+      </div>
+      <div class="footer-box">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Grocify. All Rights Reserved | Designed by <span>TechBrains</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
