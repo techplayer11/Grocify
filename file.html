@@ -1,0 +1,367 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>
+            Online Grocery Store
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="file.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <header class="header">
+            <button id="darkModeToggle">🌙 Dark Mode</button>
+            <a href="#" class="logo"><i class="fa fa-shopping-basket"></i>Grocify</a>
+        <nav class="navbar">
+            <a href="#Home">Home</a>
+            <a href="#Features">Features</a>
+            <a href="#Products">Products</a>
+            <a href="#Categories">Categories</a>
+            <a href="#Reviews">Reviews</a>
+            <a href="#Blogs">Blogs</a>
+        </nav>
+        <div class="icons">
+            <div class="fa fa-bars" id="menu-btn"></div>
+            <div class="fa fa-search" id="search-btn"></div>
+            <div class="fa fa-shopping-cart" id="cart-btn"></div>
+            <div class="fa fa-user" id="login-btn"></div>
+        </div>
+
+        <form class="search-form">
+            <input type="search" id="search-box" placeholder="search here....">
+            <label for="search-box" class="fa fa-search"></label>
+        </form>
+
+        <div class="shopping-cart">
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="https://martssr.com/images/product-images/small_16998768741711962332.jpg" height=100%, width=100>
+                <div class="content">
+                    <h3> Flour </h3>
+                    <span class="Price">RS.400</span>
+                    <span class="Quan">10Kg</span>
+                </div>
+            </div> 
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="https://5.imimg.com/data5/SELLER/Default/2023/7/324827179/DE/TK/US/3295966/pulses-packaging-pouch-500x500.jpeg" height=100%, width=100>
+                <div class="content">
+                    <h3> Pulses </h3>
+                    <span class="Price">RS.250</span>
+                    <span class="Quan">1Kg</span>
+                </div>
+            </div> 
+            <div class="box">
+                <i class="fa fa-trash"></i>
+                <img src="https://seedlefarms.com/wp-content/uploads/2022/02/Green-Grapes.jpg" height=100%, width=100>
+                <div class="content">
+                    <h3> Flour </h3>
+                    <span class="Price">RS.120</span>
+                    <span class="Quan">250gm</span>
+                </div>
+            </div>
+            <div class="total">Total:RS.770/-</div> 
+            <a href="#" class="btn">Checkout</a>
+        </div>
+
+        <form action="#"class="login-form">
+            <h3>Login now</h3>
+            <input type="email" placeholder="your email" class="box">
+            <input type="password" placeholder="your password" class="box">
+            <p> Forget password <a href="#">Click here</a></p>
+            <p> Don't have an account <a href="#">Create now</a></p>
+            <input type="Submit" value="Login now" class="btn">
+        </form>
+        </header>
+        <section class="Home" id="Home">
+            <div class="content">
+                <h3><span>Freshness</span> delivered to Your doorstep</h3>
+                    <p>Your favorite groceries, fresh produce, and pantry essentials are just a few clicks away, arriving at your doorstep exactly when you need them. Simplify your routine and let us take care of the rest—because your time is valuable, and quality shouldn't wait.</p>
+                    <a href="#" class="btn">Order now</a>
+                </div>
+            </section>
+            <section class="Features" id="Features">  
+                <h1 class="heading"> Our <span>Features</span></h1>
+
+                <div class="box-container">
+                    <div class="box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwnVw8wBhpuee9ww85XrPpuyF3jKzThWGcsQ&s">
+                        <h3> Natural and Fresh</h3>
+                        <p>Fresh from nature, straight to your table—pure, wholesome, and naturally perfect</p>
+                    <a href="#" class="btn">read more</a>
+                    </div>
+                    <div class="box">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2024/7/433931404/UB/JG/IR/101707737/door-to-door-courier-service.jpg">
+                        <h3> Door to door service</h3>
+                        <p>Fresh from nature, straight to your table—pure, wholesome, and naturally perfect</p>
+                    <a href="#" class="btn">read more</a>
+                    </div>
+
+                    <div class="box">
+                        <img src="https://www.financialexpress.com/wp-content/uploads/2020/12/Digital-payment-big.jpg">
+                        <h3> Natural and Fresh</h3>
+                        <p>Fresh from nature, straight to your table—pure, wholesome, and naturally perfect</p>
+                    <a href="#" class="btn">read more</a>
+                    </div>
+                </div>
+            </section>
+            <section class="products" id="Products">
+                <h1 class="heading">Our <span>Products</span></h1>
+                <div class="product-slider">
+                    <div class="wrapper">
+                        <div class="box">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH5iZb8gfXQCZPjx1zWhEkAz3wcH32pTZTRg&s" alt="Butter">
+                            <h1>Butter</h1>
+                            <div class="price">Rs.90/-</div>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half"></i>
+                            </div>
+                            <a href="#" class="btn">Add to Cart</a>
+                        </div>
+                        <div class="box">
+                            <img src="https://healthiersteps.com/wp-content/uploads/2022/03/pile-of-oranges.jpeg" alt="Orange">
+                            <h1>Orange</h1>
+                            <div class="price">Rs.70/-</div>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <a href="#" class="btn">Add to Cart</a>
+                        </div>
+                        <div class="box">
+                            <img src="https://neelamfoodlandmumbai.com/cdn/shop/products/IMG_2239_15dda34a-2c1f-42ad-841d-35803a64816f.jpg?v=1678532666" alt="Coffee">
+                            <h1>Coffee</h1>
+                            <div class="price">Rs.45/-</div>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half"></i>
+                            </div>
+                            <a href="#" class="btn">Add to Cart</a>
+                        </div>
+                        <div class="box">
+                            <img src="https://maghilaquaproducts.com/images/new/maghil-product19.jpg" alt="Salt">
+                            <h1>Salt</h1>
+                            <div class="price">Rs.40/-</div>
+                            <div class="stars">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <a href="#" class="btn">Add to Cart</a>
+                        </div>
+                    </div>
+                    
+
+
+                    <div class="product-slider">
+                        <div class="wrapper">
+                            <div class="box">
+                                <img src="https://scottishgrocer.co.uk/wp-content/uploads/2025/01/Carslberg-Britvic-range.jpg" alt="Cold drink">
+                                <h1>Cold Drink</h1>
+                                <div class="price">Rs.40/-</div>
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half"></i>
+                                </div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                            <div class="box">
+                                <img src="https://5.imimg.com/data5/SELLER/Default/2023/11/361113939/IW/GW/KS/67630052/wheat-flour.jpeg" alt="Flour">
+                                <h1>Flour</h1>
+                                <div class="price">Rs.300/-</div>
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                            <div class="box">
+                                <img src="https://images.ctfassets.net/3s5io6mnxfqz/70xjTuTfPZvNQZSEln0531/9d9eb80c7e8ec28894f084a17f9db45b/AdobeStock_7425002.jpeg?w=1920" alt="Watermelon">
+                                <h1>Watermelon</h1>
+                                <div class="price">Rs.90/-</div>
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half"></i>
+                                </div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                            <div class="box">
+                                <img src="https://s3.eu-1.blufs.ir/aradbranding-en-uploads/topics/16752551429653.jpg" alt="Maggi">
+                                <h1>Maggi</h1>
+                                <div class="price">Rs.30/-</div>
+                                <div class="stars">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                </div>
+                                <a href="#" class="btn">Add to Cart</a>
+                            </div>
+                        </div>
+            </section>
+            <section class="Categories" id="Categories">
+                <h1 class="heading">Product <span>Categories</span></h1>
+                <div class="box-container">
+                    <div class="box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlDE9fiZxCUppX0lLhzc3hFUKQcjV7Bg9mTw&s" alt="Fruits">
+                        <h3>Fruits</h3>
+                        <p>Upto 45% off</p>
+                        <a href="#" class="btn">Shop now</a>
+                    </div>
+                    <div class="box">
+                        <img src="https://www.siilc.edu.in/courses/wp-content/uploads/2024/03/c-29.jpg" alt="Fruits">
+                        <h3>Diary products</h3>
+                        <p>Upto 30% off</p>
+                        <a href="#" class="btn">Shop now</a>
+                    </div>
+                    <div class="box">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJuNq8RtG1uqS8i3MZnRDPTWEMMB8EavLKCQ&s" alt="Fruits">
+                        <h3>Pulses</h3>
+                        <p>Upto 40% off</p>
+                        <a href="#" class="btn">Shop now</a>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews" id="Reviews">
+                <h1 class="heading">Customer <span>Reviews</span></h1>
+                <div class="review-container">
+                    
+                    <div class="review-box">
+                        <img src="https://media.licdn.com/dms/image/v2/D4E03AQHgvoyRy-rThA/profile-displayphoto-shrink_400_400/B4EZOuERXSHwAg-/0/1733792176735?e=2147483647&v=beta&t=J9Xyudvbs9WYcfMux4F3RXlqQxyRaaDRCG0mt8gU_YQ" alt="Customer Photo">
+                        <h3>Riya Sharma</h3>
+                        <p>"The products were fantastic! Butter was fresh and oranges were juicy. Highly recommend."</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="review-box">
+                        <img src="https://cdn.prod.website-files.com/62b1b17308b0d74291186304/634961960126a8ae2eed0526_Max-new.jpg" alt="Customer Photo">
+                        <h3>Aman Kapoor</h3>
+                        <p>"Excellent quality and great prices. Coffee was amazing and salt packaging was neat."</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="review-box">
+                        <img src="https://img.mensxp.com/media/content/2020/Aug/AMP_imghappy-girl-taking-a-selfie_5f4a2e4438bf3.jpeg" alt="Customer Photo">
+                        <h3>Simran Singh</h3>
+                        <p>"Quick delivery and great customer service. Butter is now a family favorite!"</p>
+                        <div class="stars">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blogs" id="Blogs">
+                <h1 class="heading">Our <span>Blogs</span></h1>
+                <div class="blog-container">
+                    
+                    <div class="blog-box">
+                        <img src="https://www.vmcdn.ca/f/files/villagelife/images/food-and-drink/adobestock_401927235.jpeg;w=1200;h=800;mode=crop" alt="Blog Image">
+                        <div class="blog-content">
+                            <h3>Top 10 Healthy Foods to Add to Your Diet</h3>
+                            <p>Discover the best foods that not only taste great but also provide immense health benefits...</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-box">
+                        <img src="https://png.pngtree.com/background/20211216/original/pngtree-pension-insurance-morning-social-saving-money-bank-indoor-golden-pig-photography-picture-image_1521205.jpg" alt="Blog Image">
+                        <div class="blog-content">
+                            <h3>How to Save Money on Grocery Shopping</h3>
+                            <p>Learn amazing tips and tricks to shop smarter and save big on your groceries...</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                    
+                    <div class="blog-box">
+                        <img src="https://sofresh.com/wp-content/uploads/2023/10/taste-the-truth-why-fresh-ingredients-matter.jpg" alt="Blog Image">
+                        <div class="blog-content">
+                            <h3>Benefits of Fresh Organic Products</h3>
+                            <p>Organic products are not just a trend—they offer incredible advantages for your health and the environment...</p>
+                            <a href="#" class="btn">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                   
+                    <div class="footer-box">
+                        <h3>About Us</h3>
+                        <p>We provide fresh and organic products right at your doorstep. Your health is our priority!</p>
+                    </div>
+        
+                    <div class="footer-box">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#Products">Products</a></li>
+                            <li><a href="#Reviews">Reviews</a></li>
+                            <li><a href="#Blogs">Blogs</a></li>
+                        </ul>
+                    </div>
+            
+                    
+                    <div class="footer-box">
+                        <h3>Contact Us</h3>
+                        <p><i class="fa fa-map-marker"></i> Rajpura, Punjab, India</p>
+                        <p><i class="fa fa-envelope"></i> info@freshproducts.com</p>
+                    </div>
+            
+                   
+                    <div class="footer-box">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>© 2025 Fresh Products. All Rights Reserved | Designed by <span>TechBrains</span></p>
+                </div>
+            </footer>
+<script src="script.js"></script>
+    </body>
+</html>
