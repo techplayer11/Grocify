@@ -1,1 +1,189 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fruits & Vegetables | Grocify</n></title>
+    <link rel="stylesheet" href="file.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar-left { display: flex; align-items: center; }
+        .dark-mode-toggle { margin-right: 15px; font-size: 16px; cursor: pointer; }
+        .logo { font-size: 28px; font-weight: bold; color: #6c2bd9; }
+        .nav-links { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 600; font-size: 14px; transition: color 0.3s; }
+        .nav-links a:hover { color: #6c2bd9; }
+        .icons { display: flex; gap: 20px; }
+        .icons i { font-size: 22px; cursor: pointer; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .product-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+        .product-card h3 { margin: 10px 0 5px; }
+        .product-card p { color: green; font-weight: bold; }
+        .shop-btn { background-color: orange; color: #fff; border: none; border-radius: 4px; padding: 8px 12px; margin-top: 10px; cursor: pointer; font-size: 14px; }
+        .shop-btn:hover { background-color: #e69500; }
+        .footer { text-align: center; padding: 15px; background-color: #eee; color: #555; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <span class="dark-mode-toggle">🌙 Dark Mode</span>
+            <span class="logo">🛒 Grocify</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="file.html">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+        <div class="icons">
+            <i class="fa fa-bars" id="menu-btn"></i>
+            <i class="fa fa-search" id="search-btn"></i>
+            <i class="fa fa-shopping-cart" id="cart-btn"></i>
+            <i class="fa fa-user" id="login-btn"></i>
+        </div>
+    </div>
+    <section class="products-grid">
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg" alt="Orange">
+            <h3>Orange</h3>
+            <p>₹60/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" alt="Apple">
+            <h3>Apple</h3>
+            <p>₹120/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" alt="Banana">
+            <h3>Banana</h3>
+            <p>₹40/dozen</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\grapes.jpg"
+            "C:\Users\Sakshi\OneDrive\Desktop\grow" alt="Grapes">
+            <h3>Grapes</h3>
+            <p>₹90/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\watermelon.jpg" alt="Watermelon">
+            <h3>Watermelon</h3>
+            <p>₹25/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Kiwi_aka.jpg" alt="Kiwi">
+            <h3>Kiwi</h3>
+            <p>₹150/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/PerfectStrawberry.jpg" alt="Strawberry">
+            <h3>Strawberry</h3>
+            <p>₹200/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Hapus_Mango.jpg" alt="Mango">
+            <h3>Mango</h3>
+            <p>₹100/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Pineapple_and_cross_section.jpg" alt="Pineapple">
+            <h3>Pineapple</h3>
+            <p>₹80/piece</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\papaya.jpg" alt="Papaya">
+            <h3>Papaya</h3>
+            <p>₹45/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\guava.jpg" alt="Guava">
+            <h3>Guava</h3>
+            <p>₹60/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\pomegranate.jpg" alt="Pomegranate">
+            <h3>Pomegranate</h3>
+            <p>₹180/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\cucumber.jpg" alt="Cucumber">
+            <h3>Cucumber</h3>
+            <p>₹30/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\carrot.jpg" alt="Carrot">
+            <h3>Carrot</h3>
+            <p>₹50/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Bright_red_tomato_and_cross_section02.jpg" alt="Tomato">
+            <h3>Tomato</h3>
+            <p>₹25/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\potatao.jpg"alt="Potato">
+            <h3>Potato</h3>
+            <p>₹20/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\onion.jpg" alt="Onion">
+            <h3>Onion</h3>
+            <p>₹30/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\cap.jpg" alt="Capsicum">
+            <h3>Capsicum</h3>
+            <p>₹60/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\spinach.jpg" alt="Spinach">
+            <h3>Spinach</h3>
+            <p>₹20/bundle</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\coriander.jpg"alt="Coriander">
+            <h3>Coriander</h3>
+            <p>₹15/bundle</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+      
+        </div>
+    </section>
+    <footer class="footer">© 2025 My Grocery Store. All rights reserved.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
