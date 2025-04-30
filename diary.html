@@ -1,1 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dairy Products | Grocify</title>
+    <link rel="stylesheet" href="file.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .navbar-left { display: flex; align-items: center; }
+        .dark-mode-toggle { margin-right: 15px; font-size: 16px; cursor: pointer; }
+        .logo { font-size: 28px; font-weight: bold; color: #6c2bd9; }
+        .nav-links { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 600; font-size: 14px; transition: color 0.3s; }
+        .nav-links a:hover { color: #6c2bd9; }
+        .icons { display: flex; gap: 20px; }
+        .icons i { font-size: 22px; cursor: pointer; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .product-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+        .product-card h3 { margin: 10px 0 5px; }
+        .product-card p { color: green; font-weight: bold; }
+        .shop-btn { background-color: orange; color: #fff; border: none; border-radius: 4px; padding: 8px 12px; margin-top: 10px; cursor: pointer; font-size: 14px; }
+        .shop-btn:hover { background-color: #e69500; }
+        .footer { text-align: center; padding: 15px; background-color: #eee; color: #555; }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <span class="dark-mode-toggle">🌙 Dark Mode</span>
+            <span class="logo">🛒 Grocify</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="file.html">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+        <div class="icons">
+            <i class="fa fa-bars" id="menu-btn"></i>
+            <i class="fa fa-search" id="search-btn"></i>
+            <i class="fa fa-shopping-cart" id="cart-btn"></i>
+            <i class="fa fa-user" id="login-btn"></i>
+        </div>
+    </div>
+
+    <section class="products-grid">
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\milk.jpg" alt="Milk">
+            <h3>Milk</h3>
+            <p>₹50/litre</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\cheese.jpg" alt="Cheese">
+            <h3>Cheese</h3>
+            <p>₹400/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\pner.jpg" alt="Paneer">
+            <h3>Paneer</h3>
+            <p>₹350/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\butter.jpg" alt="Butter">
+            <h3>Butter</h3>
+            <p>₹500/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\curd.jpg"alt="Curd">
+            <h3>Curd</h3>
+            <p>₹60/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\ghee.jpg" alt="Ghee">
+            <h3>Ghee</h3>
+            <p>₹600/litre</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\cream.jpg" alt="Cream">
+            <h3>Cream</h3>
+            <p>₹250/litre</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\yogurt.jpg" alt="Yogurt">
+            <h3>Yogurt</h3>
+            <p>₹70/500g</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\khoya.jpg" alt="Khoya">
+            <h3>Khoya</h3>
+            <p>₹450/kg</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+
+        <div class="product-card">
+            <img src="C:\Users\Sakshi\OneDrive\Desktop\buttermilk.jpg" alt="Buttermilk">
+            <h3>Buttermilk</h3>
+            <p>₹30/litre</p>
+            <button class="shop-btn">Shop Now</button>
+        </div>
+    </section>
+
+    <footer class="footer">© 2025 My Grocery Store. All rights reserved.</footer>
+    <script src="script.js"></script>
+</body>
+</html>
 
