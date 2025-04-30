@@ -148,6 +148,50 @@ document.addEventListener('DOMContentLoaded', function() {
       toast.remove();
     }, 3000);
   }
+
+   // item added to cart
+document.querySelector("#cart-btn").addEventListener("click", () => {
+  showToast("Item added to cart!");
+});
+
+
+//Item removal from cart
+document.querySelectorAll('.shopping-cart .fa-trash').forEach(btn => {
+  btn.addEventListener('click', () => {
+      if (confirm('Remove this item from the cart?')) {
+          btn.parentElement.remove();
+          cartCount = Math.max(0, cartCount - 1);
+          updateCartCount();
+          showToast('Item removed from cart!');
+      }
+  });
+});
+
+function showToast(message) {
+  let toast = document.createElement("div");
+  toast.textContent = message;
+  toast.classList.add("toast-message");
+  document.body.appendChild(toast);
+  setTimeout(() => {
+      toast.remove();
+  }, 3000);
+}
+
+
+// add item to cart
+function addItemToCart(itemName) {
+  cartCount++;
+  updateCartCount();
+  showToast(`${itemName} added to cart!`);
+}
+
+document.querySelectorAll('.products .btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+      const item = btn.parentElement.querySelector('h1').textContent;
+      addItemToCart(item);
+  });
+});
+
   
   // Function to add item to cart
   function addItemToCart(itemName, price, imgSrc) {
