@@ -403,3 +403,4 @@ document.querySelectorAll('.products .btn').forEach(btn => {
     toast.remove();
   }, 3000);
 }
+
