@@ -2,121 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fruits & Vegetables | Grocify</title>
-    <link rel="stylesheet" href="file.css"> <!-- Optional external CSS (your file.css) -->
+    <title>Fruits & Vegetables | Grocify</n></title>
+    <link rel="stylesheet" href="file.css">
     <style>
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
             background-color: #f9f9f9;
         }
-
-        /* Navbar */
         .navbar {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background-color: #fff;
-            padding: 15px 30px; /* Increased navbar height */
+            padding: 15px 30px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-
-        .navbar-left {
-            display: flex;
-            align-items: center;
-        }
-
-        .dark-mode-toggle {
-            margin-right: 15px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        /* Logo - Bigger */
-        .logo {
-            font-size: 36px; /* Increased size */
-            font-weight: bold;
-            color: #6c2bd9;
-        }
-
-        /* Nav links - Bigger text and more spacing */
-        .nav-links {
-            display: flex;
-            gap: 25px; /* More spacing */
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 18px; /* Bigger */
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #6c2bd9;
-        }
-
-        /* Icons - Bigger */
-        .icons {
-            display: flex;
-            gap: 20px;
-        }
-
-        .icons i {
-            font-size: 22px;
-            cursor: pointer;
-        }
-
-        /* Product Grid */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .product-card {
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            text-align: center;
-            padding: 15px;
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .product-card h3 {
-            margin: 10px 0 5px;
-        }
-
-        .product-card p {
-            color: green;
-            font-weight: bold;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #eee;
-            color: #555;
-        }
+        .navbar-left { display: flex; align-items: center; }
+        .dark-mode-toggle { margin-right: 15px; font-size: 16px; cursor: pointer; }
+        .logo { font-size: 28px; font-weight: bold; color: #6c2bd9; }
+        .nav-links { display: flex; gap: 18px; list-style: none; margin: 0; padding: 0; }
+        .nav-links a { text-decoration: none; color: #333; font-weight: 600; font-size: 14px; transition: color 0.3s; }
+        .nav-links a:hover { color: #6c2bd9; }
+        .icons { display: flex; gap: 20px; }
+        .icons i { font-size: 22px; cursor: pointer; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+        .product-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; padding: 15px; display: flex; flex-direction: column; justify-content: space-between; }
+        .product-card img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
+        .product-card h3 { margin: 10px 0 5px; }
+        .product-card p { color: green; font-weight: bold; }
+        .shop-btn { background-color: orange; color: #fff; border: none; border-radius: 4px; padding: 8px 12px; margin-top: 10px; cursor: pointer; font-size: 14px; }
+        .shop-btn:hover { background-color: #e69500; }
+        .footer { text-align: center; padding: 15px; background-color: #eee; color: #555; }
     </style>
-    <!-- Font Awesome for icons (add this link in case icons are not showing) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-
-    <!-- SINGLE NAVBAR -->
     <div class="navbar">
         <div class="navbar-left">
             <span class="dark-mode-toggle">🌙 Dark Mode</span>
@@ -137,188 +58,131 @@
             <i class="fa fa-user" id="login-btn"></i>
         </div>
     </div>
-
-    <!-- PRODUCTS GRID -->
     <section class="products-grid">
-
         <div class="product-card">
-            <img src="images/orange.jpg" alt="Orange">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg" alt="Orange">
             <h3>Orange</h3>
             <p>₹60/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/apple.jpg" alt="Apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" alt="Apple">
             <h3>Apple</h3>
             <p>₹120/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/banana.jpg" alt="Banana">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Banana-Single.jpg" alt="Banana">
             <h3>Banana</h3>
             <p>₹40/dozen</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/grapes.jpg" alt="Grapes">
+            <img src="data:image/jpeg;base64,/9j/..." alt="Grapes">
             <h3>Grapes</h3>
             <p>₹90/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/watermelon.jpg" alt="Watermelon">
+            <img src="https://media.istockphoto.com/id/157482029/photo/watermelon-fruit.jpg" alt="Watermelon">
             <h3>Watermelon</h3>
             <p>₹25/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/kiwi.jpg" alt="Kiwi">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/Kiwi_aka.jpg" alt="Kiwi">
             <h3>Kiwi</h3>
             <p>₹150/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/strawberry.jpg" alt="Strawberry">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/PerfectStrawberry.jpg" alt="Strawberry">
             <h3>Strawberry</h3>
             <p>₹200/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/mango.jpg" alt="Mango">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/Hapus_Mango.jpg" alt="Mango">
             <h3>Mango</h3>
             <p>₹100/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/pineapple.jpg" alt="Pineapple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Pineapple_and_cross_section.jpg" alt="Pineapple">
             <h3>Pineapple</h3>
             <p>₹80/piece</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/papaya.jpg" alt="Papaya">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Papaya_cross_section_bnc.jpg" alt="Papaya">
             <h3>Papaya</h3>
             <p>₹45/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/guava.jpg" alt="Guava">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Guava_ID.jpg" alt="Guava">
             <h3>Guava</h3>
             <p>₹60/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/pomegranate.jpg" alt="Pomegranate">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Pomegranate_dissected.jpg" alt="Pomegranate">
             <h3>Pomegranate</h3>
             <p>₹180/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/cucumber.jpg" alt="Cucumber">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Cucumis_sativus.jpg" alt="Cucumber">
             <h3>Cucumber</h3>
             <p>₹30/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/carrot.jpg" alt="Carrot">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Carrot.jpg" alt="Carrot">
             <h3>Carrot</h3>
             <p>₹50/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/tomato.jpg" alt="Tomato">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Bright_red_tomato_and_cross_section02.jpg" alt="Tomato">
             <h3>Tomato</h3>
             <p>₹25/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/potato.jpg" alt="Potato">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Potatoes.jpg" alt="Potato">
             <h3>Potato</h3>
             <p>₹20/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/onion.jpg" alt="Onion">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Onion_on_White.JPG" alt="Onion">
             <h3>Onion</h3>
             <p>₹30/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/capsicum.jpg" alt="Capsicum">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Capsicum_annuum_fruits.jpg" alt="Capsicum">
             <h3>Capsicum</h3>
             <p>₹60/kg</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/spinach.jpg" alt="Spinach">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Spinach_leaves.jpg" alt="Spinach">
             <h3>Spinach</h3>
             <p>₹20/bundle</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
         <div class="product-card">
-            <img src="images/coriander.jpg" alt="Coriander">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Coriander_leaves.jpg" alt="Coriander">
             <h3>Coriander</h3>
             <p>₹15/bundle</p>
+            <button class="shop-btn">Shop Now</button>
         </div>
-
-        <div class="product-card">
-            <img src="images/ginger.jpg" alt="Ginger">
-            <h3>Ginger</h3>
-            <p>₹100/kg</p>
+      
         </div>
-
-        <div class="product-card">
-            <img src="images/garlic.jpg" alt="Garlic">
-            <h3>Garlic</h3>
-            <p>₹120/kg</p>
-        </div>
-
-        <div class="product-card">
-            <img src="images/peas.jpg" alt="Green Peas">
-            <h3>Green Peas</h3>
-            <p>₹70/kg</p>
-        </div>
-
-        <div class="product-card">
-            <img src="images/cauliflower.jpg" alt="Cauliflower">
-            <h3>Cauliflower</h3>
-            <p>₹40/piece</p>
-        </div>
-
-        <div class="product-card">
-            <img src="images/cabbage.jpg" alt="Cabbage">
-            <h3>Cabbage</h3>
-            <p>₹35/piece</p>
-        </div>
-
-        <div class="product-card">
-            <img src="images/brinjal.jpg" alt="Brinjal">
-            <h3>Brinjal</h3>
-            <p>₹40/kg</p>
-        </div>
-
-        <div class="product-card">
-            <img src="images/ladyfinger.jpg" alt="Lady Finger">
-            <h3>Lady Finger</h3>
-            <p>₹50/kg</p>
-        </div>
-
-        <div class="product-card">
-            <img src="images/bittergourd.jpg" alt="Bitter Gourd">
-            <h3>Bitter Gourd</h3>
-            <p>₹45/kg</p>
-        </div>
-
-        <div class="product-card">
-            <img src="images/bottle-gourd.jpg" alt="Bottle Gourd">
-            <h3>Bottle Gourd</h3>
-            <p>₹30/kg</p>
-        </div>
-
     </section>
-
     <footer class="footer">© 2025 My Grocery Store. All rights reserved.</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
