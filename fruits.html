@@ -1,122 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fruits & Vegetables</title>
-  <link rel="stylesheet" href="style.css"> <!-- Assuming your CSS is in style.css -->
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fefefe;
-    }
-    .navbar {
-      background: #4CAF50;
-      padding: 15px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar h1 {
-      margin: 0;
-    }
-    .navbar a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 30px;
-    }
-    .product {
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      text-align: center;
-      padding: 15px;
-      background-color: #fff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .product img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-    .product h3 {
-      margin: 10px 0 5px;
-    }
-    .product p {
-      color: green;
-      font-weight: bold;
-    }
-    footer {
-      text-align: center;
-      background: #4CAF50;
-      color: white;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Fruits & Vegetables | Grocify</title>
+    <link rel="stylesheet" href="file.css"> <!-- Optional external CSS (your file.css) -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            padding: 15px 30px; /* Increased navbar height */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .dark-mode-toggle {
+            margin-right: 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Logo - Bigger */
+        .logo {
+            font-size: 36px; /* Increased size */
+            font-weight: bold;
+            color: #6c2bd9;
+        }
+
+        /* Nav links - Bigger text and more spacing */
+        .nav-links {
+            display: flex;
+            gap: 25px; /* More spacing */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            font-size: 18px; /* Bigger */
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #6c2bd9;
+        }
+
+        /* Icons - Bigger */
+        .icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .icons i {
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* Product Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .product-card p {
+            color: green;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #eee;
+            color: #555;
+        }
+    </style>
+    <!-- Font Awesome for icons (add this link in case icons are not showing) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-  <!-- Navigation Bar -->
-  <div class="navbar">
-    <h1>My Grocery Store</h1>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="fruits.html">Fruits & Veggies</a>
-      <a href="products.html">All Products</a>
-      <a href="contact.html">Contact</a>
+    <!-- SINGLE NAVBAR -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <span class="dark-mode-toggle">🌙 Dark Mode</span>
+            <span class="logo">🛒 Grocify</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="file.html">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+        <div class="icons">
+            <i class="fa fa-bars" id="menu-btn"></i>
+            <i class="fa fa-search" id="search-btn"></i>
+            <i class="fa fa-shopping-cart" id="cart-btn"></i>
+            <i class="fa fa-user" id="login-btn"></i>
+        </div>
     </div>
-  </div>
 
-  <!-- Product Grid -->
-  <section class="product-grid">
-    <!-- Sample product block -->
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2017/01/20/15/06/oranges-1995056_1280.jpg" alt="Orange"><h3>Orange</h3><p>₹60/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2015/08/20/20/07/apples-898075_1280.jpg" alt="Apple"><h3>Apple</h3><p>₹120/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/banana-3088438_1280.jpg" alt="Banana"><h3>Banana</h3><p>₹40/dozen</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2015/04/10/00/41/grapes-715589_1280.jpg" alt="Grapes"><h3>Grapes</h3><p>₹90/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2016/07/21/11/17/watermelon-1535772_1280.jpg" alt="Watermelon"><h3>Watermelon</h3><p>₹25/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2017/01/20/15/06/kiwi-1995055_1280.jpg" alt="Kiwi"><h3>Kiwi</h3><p>₹35/piece</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2013/07/12/12/58/strawberry-146391_1280.png" alt="Strawberry"><h3>Strawberry</h3><p>₹150/box</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2020/03/03/04/25/mango-4896473_1280.jpg" alt="Mango"><h3>Mango</h3><p>₹100/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2016/02/02/15/09/fruit-1179763_1280.jpg" alt="Pineapple"><h3>Pineapple</h3><p>₹60/piece</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2015/05/31/12/55/papaya-791706_1280.jpg" alt="Papaya"><h3>Papaya</h3><p>₹50/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2018/02/04/14/36/vegetables-3135175_1280.jpg" alt="Tomato"><h3>Tomato</h3><p>₹30/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2017/01/20/15/06/onion-1995052_1280.jpg" alt="Onion"><h3>Onion</h3><p>₹25/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2014/04/10/11/06/potatoes-320871_1280.jpg" alt="Potato"><h3>Potato</h3><p>₹20/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2020/02/06/20/01/spinach-4827128_1280.jpg" alt="Spinach"><h3>Spinach</h3><p>₹15/bunch</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2013/07/12/14/56/carrot-150995_1280.png" alt="Carrot"><h3>Carrot</h3><p>₹35/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2018/02/04/14/36/vegetables-3135176_1280.jpg" alt="Cabbage"><h3>Cabbage</h3><p>₹25/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2013/07/12/16/38/broccoli-151851_1280.png" alt="Broccoli"><h3>Broccoli</h3><p>₹60/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2018/03/28/12/35/cauliflower-3260857_1280.jpg" alt="Cauliflower"><h3>Cauliflower</h3><p>₹30/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2016/04/21/23/44/cucumber-1346693_1280.jpg" alt="Cucumber"><h3>Cucumber</h3><p>₹25/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2018/08/22/13/03/eggplant-3625910_1280.jpg" alt="Brinjal"><h3>Brinjal</h3><p>₹30/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2014/10/22/18/00/green-peas-498600_1280.jpg" alt="Green Peas"><h3>Green Peas</h3><p>₹45/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2018/03/14/20/08/ladyfinger-3224204_1280.jpg" alt="Ladyfinger"><h3>Ladyfinger</h3><p>₹35/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2016/04/28/13/36/green-chili-1353233_1280.jpg" alt="Green Chili"><h3>Green Chili</h3><p>₹20/250g</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2013/07/12/12/58/garlic-146341_1280.png" alt="Garlic"><h3>Garlic</h3><p>₹120/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2017/09/26/13/18/coriander-2786736_1280.jpg" alt="Coriander"><h3>Coriander</h3><p>₹10/bunch</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2020/05/06/09/52/lemon-5136626_1280.jpg" alt="Lemon"><h3>Lemon</h3><p>₹5/piece</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2017/06/02/19/29/mint-2368222_1280.jpg" alt="Mint"><h3>Mint</h3><p>₹10/bunch</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2013/07/12/16/57/turmeric-152441_1280.png" alt="Raw Turmeric"><h3>Raw Turmeric</h3><p>₹90/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2020/04/17/09/46/ginger-5054965_1280.jpg" alt="Ginger"><h3>Ginger</h3><p>₹80/kg</p></div>
-    <div class="product"><img src="https://cdn.pixabay.com/photo/2015/10/17/15/33/beetroot-991399_1280.jpg" alt="Beetroot"><h3>Beetroot</h3><p>₹40/kg</p></div>
-  </section>
+    <!-- PRODUCTS GRID -->
+    <section class="products-grid">
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 My Grocery Store. All rights reserved.</p>
-  </footer>
+        <div class="product-card">
+            <img src="images/orange.jpg" alt="Orange">
+            <h3>Orange</h3>
+            <p>₹60/kg</p>
+        </div>
 
+        <div class="product-card">
+            <img src="images/apple.jpg" alt="Apple">
+            <h3>Apple</h3>
+            <p>₹120/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/banana.jpg" alt="Banana">
+            <h3>Banana</h3>
+            <p>₹40/dozen</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/grapes.jpg" alt="Grapes">
+            <h3>Grapes</h3>
+            <p>₹90/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/watermelon.jpg" alt="Watermelon">
+            <h3>Watermelon</h3>
+            <p>₹25/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/kiwi.jpg" alt="Kiwi">
+            <h3>Kiwi</h3>
+            <p>₹150/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/strawberry.jpg" alt="Strawberry">
+            <h3>Strawberry</h3>
+            <p>₹200/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/mango.jpg" alt="Mango">
+            <h3>Mango</h3>
+            <p>₹100/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pineapple.jpg" alt="Pineapple">
+            <h3>Pineapple</h3>
+            <p>₹80/piece</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/papaya.jpg" alt="Papaya">
+            <h3>Papaya</h3>
+            <p>₹45/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/guava.jpg" alt="Guava">
+            <h3>Guava</h3>
+            <p>₹60/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/pomegranate.jpg" alt="Pomegranate">
+            <h3>Pomegranate</h3>
+            <p>₹180/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/cucumber.jpg" alt="Cucumber">
+            <h3>Cucumber</h3>
+            <p>₹30/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/carrot.jpg" alt="Carrot">
+            <h3>Carrot</h3>
+            <p>₹50/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/tomato.jpg" alt="Tomato">
+            <h3>Tomato</h3>
+            <p>₹25/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/potato.jpg" alt="Potato">
+            <h3>Potato</h3>
+            <p>₹20/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/onion.jpg" alt="Onion">
+            <h3>Onion</h3>
+            <p>₹30/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/capsicum.jpg" alt="Capsicum">
+            <h3>Capsicum</h3>
+            <p>₹60/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/spinach.jpg" alt="Spinach">
+            <h3>Spinach</h3>
+            <p>₹20/bundle</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/coriander.jpg" alt="Coriander">
+            <h3>Coriander</h3>
+            <p>₹15/bundle</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/ginger.jpg" alt="Ginger">
+            <h3>Ginger</h3>
+            <p>₹100/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/garlic.jpg" alt="Garlic">
+            <h3>Garlic</h3>
+            <p>₹120/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/peas.jpg" alt="Green Peas">
+            <h3>Green Peas</h3>
+            <p>₹70/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/cauliflower.jpg" alt="Cauliflower">
+            <h3>Cauliflower</h3>
+            <p>₹40/piece</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/cabbage.jpg" alt="Cabbage">
+            <h3>Cabbage</h3>
+            <p>₹35/piece</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/brinjal.jpg" alt="Brinjal">
+            <h3>Brinjal</h3>
+            <p>₹40/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/ladyfinger.jpg" alt="Lady Finger">
+            <h3>Lady Finger</h3>
+            <p>₹50/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/bittergourd.jpg" alt="Bitter Gourd">
+            <h3>Bitter Gourd</h3>
+            <p>₹45/kg</p>
+        </div>
+
+        <div class="product-card">
+            <img src="images/bottle-gourd.jpg" alt="Bottle Gourd">
+            <h3>Bottle Gourd</h3>
+            <p>₹30/kg</p>
+        </div>
+
+    </section>
+
+    <footer class="footer">© 2025 My Grocery Store. All rights reserved.</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
