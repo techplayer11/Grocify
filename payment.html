@@ -24,3 +24,34 @@
   row-gap: 1rem;  /* Space between rows */
 }
 
+  </style>
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <i class="fa fa-shopping-basket"></i> Grocify
+    </a>
+    <nav class="navbar">
+      <a href="index.html#Home">Home</a>
+      <a href="index.html#Features">Features</a>
+      <a href="index.html#Products">Products</a>
+      <a href="index.html#Categories">Categories</a>
+      <a href="index.html#Reviews">Reviews</a>
+      <a href="index.html#Blogs">Blogs</a>
+    </nav>
+    <div class="icons">
+      <div id="menu-btn" class="fa fa-bars"></div>
+      <div id="search-btn" class="fa fa-search"></div>
+      <div id="cart-btn" class="fa fa-shopping-cart"><span class="badge">0</span></div>
+      <div id="login-btn" class="fa fa-user"></div>
+    </div>
+
+    <form class="search-form">
+      <input type="search" id="search-box" placeholder="Search here..." />
+      <label for="search-box" class="fa fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+      <!-- Cart items will be injected by script.js -->
+      <div class="total">Total: RS.0/-</div>
+      <a href="#" id="checkout-btn" class="btn">Checkout</a>
+    </div>
