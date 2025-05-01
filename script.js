@@ -116,6 +116,7 @@ darkModeToggle.addEventListener("click", () => {
   }
 });
 
+
 // Load theme from localStorage on page load
 window.addEventListener("DOMContentLoaded", () => {
   const theme = localStorage.getItem("theme");
