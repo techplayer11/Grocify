@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natural & Fresh Groceries | Grocify</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link rel="stylesheet" href="file.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <i class="fa fa-shopping-basket"></i> Grocify
+      </a>
+      <nav class="navbar">
+        <a href="index.html#Home">Home</a>
+        <a href="index.html#Features">Features</a>
+        <a href="index.html#Products">Products</a>
+        <a href="index.html#Categories">Categories</a>
+        <a href="index.html#Reviews">Reviews</a>
+        <a href="index.html#Blogs">Blogs</a>
+      </nav>
+      <div class="icons">
+        <i id="menu-btn" class="fa fa-bars"></i>
+        <i id="search-btn" class="fa fa-search"></i>
+        <i id="cart-btn" class="fa fa-shopping-cart"><span class="badge">0</span></i>
+        <i id="login-btn" class="fa fa-user"></i>
+      </div>
+    </div>
+
+    <form class="search-form">
+      <input type="search" id="search-box" placeholder="Search here..." />
+      <label for="search-box" class="fa fa-search"></label>
+    </form>
+
+    <div class="shopping-cart">
+      <!-- Cart items will be injected by script.js -->
+      <div class="total">Total: RS.0/-</div>
+      <a href="#" id="checkout-btn" class="btn">Checkout</a>
+    </div>
+
+    <form action="#" class="login-form">
+      <h3>Login now</h3>
+      <input type="email" placeholder="Your email" class="box" />
+      <input type="password" placeholder="Your password" class="box" />
+      <p>Forgot password? <a href="#">Click here</a></p>
+      <p>Don't have an account? <a href="#">Create now</a></p>
+      <input type="submit" value="Login now" class="btn" />
+    </form>
+  </header>
 
