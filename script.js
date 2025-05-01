@@ -212,7 +212,8 @@ function showToast(message) {
     }, 3000);
   }
 
-  // item added to cart
+  
+   // item added to cart
 document.querySelector("#cart-btn").addEventListener("click", () => {
   showToast("Item added to cart!");
 });
@@ -255,7 +256,7 @@ document.querySelectorAll('.products .btn').forEach(btn => {
   });
 });
 
-
+  
   // Function to add item to cart
   function addItemToCart(itemName, price, imgSrc) {
     // Create a new cart item
